@@ -1,79 +1,136 @@
-<p align="center">
-  <img src="assets/logo.svg" alt="T-Downloader Logo" width="96" height="96" />
+<div align="center">
+
+<img src="assets/logo.svg" alt="T-Downloader Logo" width="96" height="96" />
+
+<h1>T-Downloader</h1>
+
+<p>
+  <strong>Büyük dosyaları ve web medyalarını paralel parçalara bölerek en yüksek hızda indiren modern Windows indirme yöneticisi ve Manifest V3 tarayıcı eklentisi.</strong>
 </p>
 
-<h1 align="center">T-Downloader</h1>
-<p align="center">🌐 <strong>Desteklenen Diller:</strong> Türkçe (TR) · English (EN) · Deutsch (DE)</p>
-
-<p align="center">
+<p>
   <a href="https://github.com/taha-sa/t-downloader-releases/releases/latest">
-    <img src="https://img.shields.io/github/v/release/taha-sa/t-downloader-releases?style=flat-square&label=Latest%20Release&color=gold" alt="Latest Release" />
+    <img src="https://img.shields.io/github/v/release/taha-sa/t-downloader-releases?style=for-the-badge&label=S%C3%BCr%C3%BCm&color=D97706" alt="Latest Release" />
   </a>
-  <img src="https://img.shields.io/badge/Platform-Windows%20%7C%20Chrome%20%7C%20Edge%20%7C%20Brave-blue?style=flat-square" alt="Platform" />
-  <img src="https://img.shields.io/badge/Diller-T%C3%BCrk%C3%A7e%20%7C%20English%20%7C%20Deutsch-blueviolet?style=flat-square" alt="Diller: Türkçe, English, Deutsch" />
+  <img src="https://img.shields.io/badge/Platform-Windows%20x64%20%7C%20Chrome%20%7C%20Edge%20%7C%20Brave-1F2937?style=for-the-badge" alt="Platform" />
+  <img src="https://img.shields.io/badge/Diller-TR%20%C2%B7%20EN%20%C2%B7%20DE-1F2937?style=for-the-badge" alt="Diller" />
   <a href="https://github.com/taha-sa/t-downloader-releases/releases">
-    <img src="https://img.shields.io/github/downloads/taha-sa/t-downloader-releases/total?style=flat-square&label=Downloads&color=success" alt="Downloads" />
+    <img src="https://img.shields.io/github/downloads/taha-sa/t-downloader-releases/total?style=for-the-badge&label=%C4%B0ndirme&color=059669" alt="Downloads" />
   </a>
 </p>
 
-> **Not:** Bu depo yalnızca resmi derlenmiş kurulum dosyalarını, güncelleyici manifestlerini ve doğrulama özetlerini barındırır.
+<p>
+  <a href="#-öne-çıkan-özellikler">Özellikler</a> •
+  <a href="#-indir-ve-kur">İndir & Kur</a> •
+  <a href="#-tarayıcı-eklentisi-kurulumu">Tarayıcı Eklentisi</a> •
+  <a href="#-gizlilik-ve-güvenlik">Güvenlik</a> •
+  <a href="#-t-suite-ekosistemi">T-Suite</a>
+</p>
+
+</div>
 
 <p align="center">
-  <img src="assets/screenshot.png" alt="Uygulama Ekran Görüntüsü" width="760" />
+  <img src="assets/screenshot.png" alt="T-Downloader Arayüzü" width="760" />
 </p>
 
+> **Not:** Bu depo yalnızca resmi derlenmiş Windows kurulum dosyasını, taşınabilir (portable) arşivi, Manifest V3 tarayıcı eklentisini ve `SHA-256` doğrulama özetlerini barındırır.
 
 ---
 
-## Ne İşe Yarar?
+## ✨ Öne Çıkan Özellikler
 
-**T-Downloader**, çok parçacıklı bağlantılarla yüksek hızlı dosya indirme sunan, tarayıcı eklentisiyle indirmeleri doğrudan yakalayan modern bir Windows indirme yöneticisidir.
+| Özellik | Detay |
+|---|---|
+| ⚡ **Çok Parçacıklı (Multi-Segment) Hızlandırma** | İndirmeleri paralel parçalara bölerek internet hattınızın tam kapasitesini kullanır; büyük arşivlerde ve ISO dosyalarında belirgin hız artışı sağlar. |
+| 🧩 **Tarayıcı Eklentisi (Chrome / Edge / Brave)** | Manifest V3 + Native Messaging Host mimarisiyle tarayıcı indirmelerini otomatik olarak T-Downloader'a aktarır; video oynatıcılarının üzerinde tek tıkla indirme düğmesi sunar. |
+| 🎬 **Video & HLS Akış İndirme** | HLS (`.m3u8`) akışlarını doğrudan ayrıştırır, çözünürlük/kalite seçimi sunar, oturum çerezlerini güvenle aktarır ve `yt-dlp` entegrasyonunu destekler. |
+| ⏯️ **Duraklat, Devam Et & Kuyruk Yönetimi** | Bağlantı kopsa bile indirmeleri kaldığı yerden sürdürün; dosyaları kuyruklara ayırıp sırayla indirin. |
+| ⏰ **Akıllı Zamanlayıcı (Scheduler)** | İndirme kuyruklarını belirlediğiniz saatte otomatik başlatın veya durdurun. |
+| 🚦 **Hız Limiti & Disk Alanı Koruması** | Ağınızı kilitlememek için anlık hız sınırı koyun; hedef diskte yer azaldığında otomatik uyarı alın. |
+| 📂 **Otomatik Kategorilendirme** | İndirilen dosyaları otomatik olarak *Sıkıştırılmış, Belgeler, Müzik, Programlar, Video ve Resimler* klasörlerine ayırır. |
+| 🔐 **Dahili SHA-256 / Hash Doğrulama** | İndirdiğiniz dosyaların bütünlüğünü harici araç gerekmeden doğrudan uygulama içinden kontrol edin. |
+| 🌙 **Tam Koyu Arayüz & İmzalı Güncelleme** | Göz yormayan koyu tema, ECDSA imzalı uygulama içi güncelleyici ve **T-Bridge Hub** entegrasyonu. |
 
 ---
 
 ## 📥 İndir ve Kur
 
-👉 **[En Son Sürümü İndir (Latest Release)](https://github.com/taha-sa/t-downloader-releases/releases/latest)**
+### 👉 [En Son Sürümü İndir (Latest Release)](https://github.com/taha-sa/t-downloader-releases/releases/latest)
 
 | Dosya | Açıklama | Platform |
 |---|---|---|
-| \T-Downloader-Setup-1.2.0.exe\ | **Önerilen** Windows kurulum dosyası (Native Messaging Host dahil) | Windows x64 |
-| \T-Downloader-Extension-1.2.0.zip\ | Chrome / Brave / Edge tarayıcı eklentisi (Manifest V3) | Tarayıcı |
-| \T-Downloader.zip\ | Taşınabilir paket ve otomatik güncelleyici arşivi | Windows x64 |
-| \SHA256SUMS.txt\ | Bütünlük doğrulama özetleri (SHA-256) | Tümü |
+| `T-Downloader-Setup-1.2.0.exe` | Resmi Windows kurulum paketi (Native Host kaydı dahil) | Windows 10/11 (x64) |
+| `T-Downloader.zip` | Kurulumsuz taşınabilir (Portable) sürüm | Windows 10/11 (x64) |
+| `T-Downloader-Extension-1.2.0.zip` | Tarayıcı eklentisi (Manifest V3) | Chrome, Edge, Brave |
+| `SHA256SUMS.txt` | Bütünlük doğrulama özetleri | Tümü |
 
-### Adım Adım Kurulum (EXE + Tarayıcı Eklentisi)
-1. **Masaüstü Uygulaması:** \T-Downloader-Setup-1.2.0.exe\ dosyasını indirip kurun. Kurulum sihirbazı \TDownloader.exe\ ve Tarayıcı Native Messaging Host kaydını otomatik olarak yapar.
-2. **Tarayıcı Eklentisi (Chrome / Brave / Edge):**
-   - \T-Downloader-Extension-1.2.0.zip\ dosyasını indirip kalıcı bir klasöre çıkarın.
-   - Tarayıcınızda \chrome://extensions\ (veya \edge://extensions\ / \rave://extensions\) adresini açın.
-   - Sağ üstten **Geliştirici Modu (Developer Mode)** anahtarını açın.
-   - **Paketsiz öğe yükle (Load unpacked)** butonuna tıklayıp çıkardığınız klasörü seçin.
-3. **SmartScreen Notu:** İlk çalıştırmada *"Windows bilgisayarınızı korudu"* uyarısı görürseniz **Ek bilgi → Yine de çalıştır** seçeneğini kullanın.
+---
+
+## 🌐 Tarayıcı Eklentisi Kurulumu
+
+T-Downloader'ın tarayıcı indirmelerini otomatik yakalaması için masaüstü uygulamasını kurduktan sonra eklentiyi ekleyin:
+
+1. `T-Downloader-Extension-1.2.0.zip` dosyasını indirip sabit bir klasöre çıkarın.
+2. Tarayıcınızda uzantılar sayfasını açın:
+   - Chrome / Brave: `chrome://extensions`
+   - Edge: `edge://extensions`
+3. Sağ üstten **Geliştirici modu (Developer mode)** anahtarını açın.
+4. **Paketlenmemiş öğe yükle (Load unpacked)** düğmesine basıp çıkardığınız eklenti klasörünü seçin.
+
+<details>
+<summary><strong>📌 Kurulum Notları & SHA-256 Doğrulama</strong></summary>
+
+<br/>
+
+- **Windows SmartScreen:** İlk kurulumda uyarı ekranı çıkarsa **Ek bilgi → Yine de çalıştır** seçeneğini kullanabilirsiniz.
+- **Taşınabilir Sürüm:** `T-Downloader.zip` dosyasını çıkarıp doğrudan `TDownloader.exe` dosyasını çalıştırabilirsiniz.
+
+```powershell
+Get-FileHash .\T-Downloader-Setup-1.2.0.exe -Algorithm SHA256
+# Çıktıyı sürüm sayfasındaki SHA256SUMS.txt ile karşılaştırın.
+```
+
+</details>
 
 ---
 
 ## 💻 Sistem Gereksinimleri
 
-- **İşletim Sistemi:** Windows 10 / 11 (64-bit)
-- **Çalışma Zamanı:** .NET 10 Desktop Runtime (yoksa kurulumda yönlendirilir)
-- **Tarayıcı:** Chromium tabanlı (Chrome, Brave, Edge — Manifest V3)
-
-## 🔒 Gizlilik
-
-- **Telemetri yok:** Kullanım verisi, analitik veya izleme kodu içermez.
-- **Veriler cihazda kalır:** Tüm işlemler yerel olarak cihazınızda gerçekleşir.
+- **İşletim Sistemi:** Windows 10 veya Windows 11 (64-bit)
+- **Desteklenen Tarayıcılar:** Google Chrome, Microsoft Edge, Brave ve Chromium tabanlı tarayıcılar
+- **Arayüz Dilleri:** Türkçe (TR) · English (EN) · Deutsch (DE)
 
 ---
 
-## 🧩 T-Suite Ailesi
+## 🔒 Gizlilik ve Güvenlik
 
-T-Suite, günlük masaüstü ve mobil iş akışları için geliştirilmiş hafif, reklamsız ve gizlilik odaklı araçlar ekosistemidir:
+- **Sıfır Telemetri:** İndirdiğiniz bağlantılar, dosya geçmişiniz veya tarayıcı etkinliğiniz hiçbir harici sunucuya gönderilmez.
+- **İmzalı Güncellemeler:** Uygulama içi güncellemeler ECDSA imzası ve SHA-256 özeti doğrulanmadan uygulanmaz.
+- **Reklamsız & Temiz:** Ek yazılım, reklam penceresi veya arka plan izleyici içermez.
+
+---
+
+## 🧩 T-Suite Ekosistemi
 
 | Uygulama | Ne İşe Yarar? | Platform | Sürüm Deposu |
 |---|---|---|---|
-| **T-Bridge** | Windows ve Android arası dosya, pano ve bildirim köprüsü | Windows, Android | [taha-sa/t-bridge-releases](https://github.com/taha-sa/t-bridge-releases) |
-| **T-Downloader** | Çok parçacıklı hızlı indirme yöneticisi + tarayıcı eklentisi | Windows, Chrome/Edge/Brave | [taha-sa/t-downloader-releases](https://github.com/taha-sa/t-downloader-releases) |
-| **T-RamCash** | Hafif RAM temizleme ve canlı bellek izleme aracı | Windows | [taha-sa/t-ramcash-releases](https://github.com/taha-sa/t-ramcash-releases) |
-| **T-DeskTree** | Hızlı disk ve klasör ağacı tarayıcısı / analiz aracı | Windows | [taha-sa/t-desktree-releases](https://github.com/taha-sa/t-desktree-releases) |
-| **T-Desk Viewer** | Hızlı ve hafif mobil PDF görüntüleyici | Android | [taha-sa/tdesk-viewer-releases](https://github.com/taha-sa/tdesk-viewer-releases) |
+| **T-Bridge** | Windows & Android arası dosya, pano, bildirim, kumanda ve T-Suite Hub | Windows, Android | [taha-sa/t-bridge-releases](https://github.com/taha-sa/t-bridge-releases) |
+| **T-Downloader** *(bu depo)* | Çok parçacıklı indirme yöneticisi + video/HLS + tarayıcı eklentisi | Windows, Chrome/Edge/Brave | [taha-sa/t-downloader-releases](https://github.com/taha-sa/t-downloader-releases) |
+| **T-DeskTree** | NTFS MFT ultra hızlı disk & klasör analizi + Treemap | Windows | [taha-sa/t-desktree-releases](https://github.com/taha-sa/t-desktree-releases) |
+| **T-RamCash** | 5 katmanlı RAM temizleyici ve canlı sistem tepsisi izleyici | Windows | [taha-sa/t-ramcash-releases](https://github.com/taha-sa/t-ramcash-releases) |
+| **T-Desk Viewer** | PDF, Office, EPUB, Kod & ZIP mobil belge görüntüleyici | Android | [taha-sa/tdesk-viewer-releases](https://github.com/taha-sa/tdesk-viewer-releases) |
+
+<details>
+<summary><strong>🇬🇧 English Summary</strong></summary>
+
+<br/>
+
+**T-Downloader** is a fast, ad-free multi-segment download manager for Windows paired with a Manifest V3 browser extension for Chrome, Edge, and Brave. Features parallel acceleration, HLS/video stream capture, pause/resume queues, scheduler, speed limiter, auto-categorization, built-in SHA-256 verification, and signed in-app updates. Zero telemetry; available in Turkish, English, and German.
+
+</details>
+
+---
+
+<p align="center">
+  Hata bildirimi veya özellik önerisi için <a href="https://github.com/taha-sa/t-downloader-releases/issues">Issues</a> sekmesini kullanabilirsiniz · <a href="https://github.com/taha-sa">T-Suite Ekosistemi</a>
+</p>
