@@ -16,6 +16,11 @@
 
 > **Not:** Bu depo yalnızca resmi derlenmiş kurulum dosyalarını, güncelleyici manifestlerini ve doğrulama özetlerini barındırır.
 
+<p align="center">
+  <img src="assets/screenshot.png" alt="Uygulama Ekran Görüntüsü" width="760" />
+</p>
+
+
 ---
 
 ## Ne İşe Yarar?
